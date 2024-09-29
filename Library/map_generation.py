@@ -31,7 +31,7 @@ class Map_Generation():
             # Get possible directions
             possible_directions = [(x + dx, y + dy) for dx, dy in directions]
             valid_moves = [pos for pos in possible_directions if self.is_valid_move(pos[0], pos[1], grid, directions)]
-
+            
             if valid_moves:
                 # Choose a random valid move
                 next_pos = random.choice(valid_moves)

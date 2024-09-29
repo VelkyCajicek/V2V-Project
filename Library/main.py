@@ -1,7 +1,7 @@
 import pygame
 import map_generation as mg
 import roads as rd
-from pre_defined_maps import cross_map
+from pre_defined_maps import cross_map, l_map, reverse_l_map
 from car import Car
 
 pygame.init()
@@ -23,7 +23,6 @@ class GUI():
     def mainLoop(self) -> None:        
         clock = pygame.time.Clock()
         
-        
         pygame.display.flip()
         
         test_car = Car(self.screen_size, self.screen, self.block_size)
@@ -43,3 +42,4 @@ class GUI():
         
 if __name__ == "__main__":
     gui = GUI(500, 10)
+    print(gui.grid_map)
